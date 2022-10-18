@@ -1,0 +1,14 @@
+E:\C#\3LayerModel\WindowsFormsApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+E:\C#\3LayerModel\WindowsFormsApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+E:\C#\3LayerModel\WindowsFormsApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+E:\C#\3LayerModel\WindowsFormsApp1\ConsoleApp1\obj\Debug\BUS.csprojAssemblyReference.cache
+E:\C#\3LayerModel\WindowsFormsApp1\ConsoleApp1\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+E:\C#\3LayerModel\WindowsFormsApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+E:\C#\3LayerModel\WindowsFormsApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
+E:\C#\3LayerModel\WindowsFormsApp1\ConsoleApp1\bin\Debug\DAL.exe
+E:\C#\3LayerModel\WindowsFormsApp1\ConsoleApp1\bin\Debug\DTO.exe
+E:\C#\3LayerModel\WindowsFormsApp1\ConsoleApp1\bin\Debug\DAL.pdb
+E:\C#\3LayerModel\WindowsFormsApp1\ConsoleApp1\bin\Debug\DAL.exe.config
+E:\C#\3LayerModel\WindowsFormsApp1\ConsoleApp1\bin\Debug\DTO.pdb
+E:\C#\3LayerModel\WindowsFormsApp1\ConsoleApp1\bin\Debug\DTO.exe.config
+E:\C#\3LayerModel\WindowsFormsApp1\ConsoleApp1\obj\Debug\BUS.csproj.CopyComplete
