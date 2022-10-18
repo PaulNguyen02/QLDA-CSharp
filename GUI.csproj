@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CD7B2A77-7B07-4886-AEB5-DEAB42B104E8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp1</RootNamespace>
+    <AssemblyName>WindowsFormsApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>statistic_icon_129319.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="MailKit, Version=3.4.0.0, Culture=neutral, PublicKeyToken=4e064fe7c44a8f1b, processorArchitecture=MSIL">
+      <HintPath>..\packages\MailKit.3.4.1\lib\netstandard2.0\MailKit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1004\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MimeKit, Version=3.4.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814, processorArchitecture=MSIL">
+      <HintPath>..\packages\MimeKit.3.4.1\lib\netstandard2.0\MimeKit.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.Cryptography.Pkcs, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Pkcs.6.0.0\lib\net461\System.Security.Cryptography.Pkcs.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.CodePages, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encoding.CodePages.6.0.0\lib\net461\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BUS\MessageBUS.cs" />
+    <Compile Include="BUS\STeamBUS.cs" />
+    <Compile Include="BUS\TrackerBUS.cs" />
+    <Compile Include="DAO\MailRepository.cs" />
+    <Compile Include="DAO\MessageDAO.cs" />
+    <Compile Include="DAO\STeamDAO.cs" />
+    <Compile Include="DAO\TrackerDAO.cs" />
+    <Compile Include="DTO\Messages.cs" />
+    <Compile Include="DTO\Subteam.cs" />
+    <Compile Include="DTO\Tracker.cs" />
+    <Compile Include="GUI\AboutSoftware.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AboutSoftware.Designer.cs">
+      <DependentUpon>AboutSoftware.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BUS\AdvanceSettingBUS.cs" />
+    <Compile Include="BUS\CheckSigninBUS.cs" />
+    <Compile Include="BUS\CongViecBUS.cs" />
+    <Compile Include="BUS\CTMHBUS.cs" />
+    <Compile Include="BUS\DoAnBUS.cs" />
+    <Compile Include="BUS\MemberBUS.cs" />
+    <Compile Include="BUS\MonHocBUS.cs" />
+    <Compile Include="BUS\PhanCongBUS.cs" />
+    <Compile Include="DAO\AdvanceSetting.cs" />
+    <Compile Include="DAO\CheckSignin.cs" />
+    <Compile Include="DAO\CongViecDAO.cs" />
+    <Compile Include="DAO\Connection.cs" />
+    <Compile Include="DAO\CTMHDAO.cs" />
+    <Compile Include="DAO\DoAnDAO.cs" />
+    <Compile Include="DAO\MemberDAO.cs" />
+    <Compile Include="DAO\MonHocDAO.cs" />
+    <Compile Include="DAO\PhanCongDAO.cs" />
+    <Compile Include="DTO\CongViec.cs" />
+    <Compile Include="DTO\CTMH.cs" />
+    <Compile Include="DTO\DoAn.cs" />
+    <Compile Include="DTO\Member.cs" />
+    <Compile Include="DTO\MonHoc.cs" />
+    <Compile Include="DTO\PhanCong.cs" />
+    <Compile Include="GUI\AIInstruction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\AIInstruction.Designer.cs">
+      <DependentUpon>AIInstruction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DecisionTree.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\DecisionTree.Designer.cs">
+      <DependentUpon>DecisionTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Instruction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Instruction.Designer.cs">
+      <DependentUpon>Instruction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LoadingTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\LoadingTab.Designer.cs">
+      <DependentUpon>LoadingTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Message.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Message.Designer.cs">
+      <DependentUpon>Message.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Progress.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Progress.Designer.cs">
+      <DependentUpon>Progress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Signup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Signup.Designer.cs">
+      <DependentUpon>Signup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Traker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Traker.Designer.cs">
+      <DependentUpon>Traker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Typeping.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Typeping.Designer.cs">
+      <DependentUpon>Typeping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationGUI\DeleteCTMH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotificationGUI\DeleteCTMH.Designer.cs">
+      <DependentUpon>DeleteCTMH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationGUI\DeleteCV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotificationGUI\DeleteCV.Designer.cs">
+      <DependentUpon>DeleteCV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationGUI\DeleteDoAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotificationGUI\DeleteDoAn.Designer.cs">
+      <DependentUpon>DeleteDoAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationGUI\DeleteMH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotificationGUI\DeleteMH.Designer.cs">
+      <DependentUpon>DeleteMH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationGUI\DeleteNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotificationGUI\DeleteNV.Designer.cs">
+      <DependentUpon>DeleteNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationGUI\DeletePhanCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotificationGUI\DeletePhanCong.Designer.cs">
+      <DependentUpon>DeletePhanCong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationGUI\DeleteSubteam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotificationGUI\DeleteSubteam.Designer.cs">
+      <DependentUpon>DeleteSubteam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationGUI\SigninFailed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotificationGUI\SigninFailed.Designer.cs">
+      <DependentUpon>SigninFailed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GUI\Signin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Signin.Designer.cs">
+      <DependentUpon>Signin.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="GUI\AboutSoftware.resx">
+      <DependentUpon>AboutSoftware.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AIInstruction.resx">
+      <DependentUpon>AIInstruction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DecisionTree.resx">
+      <DependentUpon>DecisionTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Instruction.resx">
+      <DependentUpon>Instruction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LoadingTab.resx">
+      <DependentUpon>LoadingTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Message.resx">
+      <DependentUpon>Message.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Progress.resx">
+      <DependentUpon>Progress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Signup.resx">
+      <DependentUpon>Signup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Traker.resx">
+      <DependentUpon>Traker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Typeping.resx">
+      <DependentUpon>Typeping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotificationGUI\DeleteCTMH.resx">
+      <DependentUpon>DeleteCTMH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotificationGUI\DeleteCV.resx">
+      <DependentUpon>DeleteCV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotificationGUI\DeleteDoAn.resx">
+      <DependentUpon>DeleteDoAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotificationGUI\DeleteMH.resx">
+      <DependentUpon>DeleteMH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotificationGUI\DeleteNV.resx">
+      <DependentUpon>DeleteNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotificationGUI\DeletePhanCong.resx">
+      <DependentUpon>DeletePhanCong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotificationGUI\DeleteSubteam.resx">
+      <DependentUpon>DeleteSubteam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotificationGUI\SigninFailed.resx">
+      <DependentUpon>SigninFailed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Signin.resx">
+      <DependentUpon>Signin.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ashley-whitlatch-36aGnv29Ss0-unsplash2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Progress theme.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wondicon-ui-free-speaker_111240.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Techcolor.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shutterstock-751109761_997_598_590.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\luke-chesser-3rWagdKBF7U-unsplash5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eye1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Friend.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SigninIco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Watcher.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Underline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\italic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\strikeout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\microsoft_office_word.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pdf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Document.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Document1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check_ok_accept_apply_1582.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\font-color_40448.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\colorpicker_94856.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Excel1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Query.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mymusic1.wav" />
+    <None Include="Resources\SFXMouseClick.wav" />
+    <None Include="Resources\Instruction1.JPG" />
+    <None Include="Resources\Instruction2.JPG" />
+    <None Include="Resources\Instruction3.JPG" />
+    <None Include="Resources\Instruction4.JPG" />
+    <Content Include="statistic_icon_129319.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
